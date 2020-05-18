@@ -29,6 +29,6 @@ TBD
 * Add tests for all classes
 * Add description for repo
 * create pip package
-* add __enter__ & __leave__ to ConsoleLogger and StopWatch
+* add __enter__ & __leave__ to ConsoleLogger
 
 
