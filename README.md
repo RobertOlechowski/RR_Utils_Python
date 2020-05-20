@@ -33,6 +33,8 @@ def consolelogger_use_case():
         print("This will go to console and file: log2.txt")
 ```
 
+### How to use Constraints
+TBD
 
 ### How to use Constraints
 TBD
@@ -60,12 +62,20 @@ def stopwatch_use_case_2():
 ```
 
 ### How to use TimeLimitGenerator
-TBD
+```python
+def timelimitgenerator_use_case():
+    def func(counter, elapsed_total, elapsed_prev):
+        import time
+        print(f"Time elapsed: {elapsed_total}")
+        time.sleep(0.2)
+        return counter
+
+    for item in TimeLimitGenerator(2, func): #will run for 2 secounds
+        print(item)
+```
 
 
 ## ToDo:
-* Add tests for TimeLimitGenerator, Constraints
-* Add description for repo in GitHub
 * create pip package
 
 
