@@ -36,8 +36,12 @@ def consolelogger_use_case():
 ### How to use Constraints
 TBD
 
-### How to use Constraints
-TBD
+### How to use Version
+```python
+ver = Version("1.2.3")
+print(ver)
+print("Major version {}".format(ver.get_version()[0]))
+```
 
 ### How to use StopWatch
 ```python
