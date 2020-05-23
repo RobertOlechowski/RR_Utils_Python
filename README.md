@@ -11,6 +11,7 @@ pip install rr-utils
 ## How to use it?
 ### How to use InlineClass
 ```python
+from InlineClass.InlineClass import InlineClass
 config_dic =  {"aa": 123, 
                "bb": "abc", 
                "cc": {"a1": 1}
@@ -22,6 +23,8 @@ print(config_obj.cc.a1)
 ### How to use ConsoleLogger
 ```python
 def consolelogger_use_case():
+    import sys
+    from ConsoleLogger import ConsoleLogger
     logger = ConsoleLogger()
     sys.stdout = logger
     print("This will go to console")
@@ -35,14 +38,29 @@ def consolelogger_use_case():
 ```
 
 ### How to use Constraints
-TBD
+```python
+from Constraints.Constraints import Constraints
+from Constraints.VersionChecker import VersionChecker, VersionToCheck
+from Version.Version import Version
+
+obj = Constraints()
+obj.add(VersionChecker(Version("3.8"), VersionToCheck.Python))
+obj.add(VersionChecker(Version("4.2"), VersionToCheck.OpenCV))
+obj.add(VersionChecker(Version("1.18"), VersionToCheck.NumPy))
+obj.check(terminate_on_error=False)
+```
 
 ### How to use Version
 ```python
+from Version.Version import Version
 ver = Version("1.2.3")
 print(ver)
 print("Major version {}".format(ver.get_version()[0]))
 ```
+
+### How to use CallOnce
+Look to dedicated [page](doc/callonce/README.md). 
+
 
 ### How to use StopWatch
 ```python
@@ -80,7 +98,5 @@ def timelimitgenerator_use_case():
 ```
 
 
-## ToDo:
-* create pip package
 
 
