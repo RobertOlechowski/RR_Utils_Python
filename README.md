@@ -4,8 +4,9 @@
 It is a set of useful classes, That I often reuse in my projects
 
 ## How to install:
-TBD
-
+```bash
+pip install rr-utils
+```
 
 ## How to use it?
 ### How to use InlineClass
