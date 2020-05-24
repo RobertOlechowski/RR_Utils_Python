@@ -59,7 +59,7 @@ print("Major version {}".format(ver.get_version()[0]))
 ```
 
 ### How to use CallOnce
-Look to dedicated [page](doc/callonce/README.md). 
+Look to dedicated [page](https://github.com/RobertOlechowski/RR_Utils_Python/blob/master/doc/callonce/README.md). 
 
 
 ### How to use StopWatch
